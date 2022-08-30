@@ -11,11 +11,19 @@ class UserService(
     private val repository: UserRepository
 ) {
 
+    fun findAll() : List<User> {
+        return repository.findAll()
+    }
+
     fun findById(userId: UUID) : User {
         val user = repository.findById(userId)
 
         if (user.isEmpty) throw UserNotFoundException(userId)
 
         return user.get()
+    }
+
+    fun add(user: User) : User {
+        return repository.save(user)
     }
 }

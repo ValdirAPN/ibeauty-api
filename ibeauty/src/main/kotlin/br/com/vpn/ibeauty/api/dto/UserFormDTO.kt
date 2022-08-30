@@ -13,8 +13,7 @@ data class UserFormDTO(
         id = null,
         name = this.name,
         birthday = this.birthday,
-        role = this.role,
-        store = null
+        role = this.role
     )
 }
 

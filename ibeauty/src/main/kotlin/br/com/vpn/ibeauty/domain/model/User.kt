@@ -8,6 +8,7 @@ import javax.persistence.Id
 import javax.persistence.JoinColumn
 import javax.persistence.OneToOne
 import javax.persistence.Table
+import javax.persistence.Transient
 
 @Entity
 @Table(name = "users")
@@ -17,10 +18,7 @@ class User(
     var id: UUID?,
     var name: String,
     var birthday: Date,
-    var role: UserRole,
-    @OneToOne
-    @JoinColumn(name = "store_id")
-    var store: Store?
+    var role: UserRole
 ) {
 
     fun isNotProvider() = role.compareTo(UserRole.PROVIDER) != 0

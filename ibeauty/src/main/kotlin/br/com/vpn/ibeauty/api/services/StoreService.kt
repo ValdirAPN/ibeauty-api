@@ -11,6 +11,10 @@ class StoreService(
     private val repository: StoreRepository
 ) {
 
+    fun findAll() : List<Store> {
+        return repository.findAll()
+    }
+
     fun add(store: Store) : Store {
         if (store.owner.isNotProvider()) throw InvalidRoleException()
 
