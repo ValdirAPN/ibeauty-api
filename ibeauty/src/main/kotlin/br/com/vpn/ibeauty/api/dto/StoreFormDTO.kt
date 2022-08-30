@@ -15,6 +15,6 @@ data class StoreFormDTO(
         owner = user,
         category = category,
         isHomeAttendant = isHomeAttendant,
-        services = listOf()
+        products = mutableListOf()
     )
 }
