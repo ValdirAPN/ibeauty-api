@@ -7,5 +7,6 @@ enum class StoreCategory {
     SKIN,
     TANNING,
     MASSAGE,
-    AROMATHERAPY
+    AROMATHERAPY,
+    MAKEUP
 }
